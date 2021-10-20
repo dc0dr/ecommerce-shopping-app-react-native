@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity ,View } from 'react-native';
 import favicon from './assets/favicon.png';
+import Login from './screens/Login';
 
 export default function App() {
   return (
