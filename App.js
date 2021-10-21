@@ -1,56 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import * as React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity ,View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from  '@react-navigation/native-stack';
 import favicon from './assets/favicon.png';
 import Login from './screens/Login';
+import HomePage from './screens/HomePage';
 
-export default function App() {
+const Stack = createNativeStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Image source={favicon} style={styles.logo}/>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen 
+        name = 'Login'
+        component = {Login}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
 
-      <Text style={styles.instructions}>
-        This is an e-commerce app! It is curently in progress 
-      </Text>
-      <Text style={styles.instructions}> 
-        Feel free to check it out and leave your comments
-      </Text>
-
-      <TouchableOpacity 
-        onPress={() => alert('The folder navigation option is not available yet!')}
-        style={styles.button}>
-        <Text style={styles.buttonText}> Button </Text>
-      </TouchableOpacity>
-
-      <StatusBar style="auto" />
-    </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1, //The display type of every view 
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  logo: {
-    width: 100,
-    height: 150,
-    marginBottom: 10,
-  },
-  instructions: {
-    color: '#888',
-    fontSize: 18,
-    marginHorizontal:15,
-  },
-  button: {
-    backgroundColor: 'blue',
-    padding: 20,
-    borderRadius: 3,
-  },
-  buttonText: {
-    fontSize: 20,
-    color: '#fff'
-  }
-});
+export default App;
