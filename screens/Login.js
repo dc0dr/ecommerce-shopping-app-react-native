@@ -1,14 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity ,View, TextInput} from 'react-native';
 
-const Login = () =>{
+const Login = ({navigation}) => {
     return(
         <View style = {loginStyles.containerView}>
-            <Text> Welcome to my store! </Text>
+            <Text> Yorozuya </Text>
 
-            <Text> Email </Text> 
-            
+            <Text> Sign-in </Text>
+
             <TextInput
                 style = {loginStyles.textInput}
                 placeholder="Enter Email"
@@ -17,6 +16,14 @@ const Login = () =>{
                 style = {loginStyles.textInput}
                 placeholder="Enter password"
                 />
+
+            <TouchableOpacity 
+                onPress={() => navigation.navigate('Home')}
+                style={loginStyles.signInButton}>
+                    <Text style={loginStyles.signInText}> Sign-in </Text>
+            </TouchableOpacity>
+
+            <Text> Don't have an account? </Text>
 
         </View>
     );
@@ -36,8 +43,17 @@ const loginStyles = StyleSheet.create({
         width: 200,
         margin: 12,
         borderWidth: 1,
-        padding: 12,
+        padding: 10,
         borderRadius: 5,
+    },
+    signInButton: {
+        backgroundColor: 'blue',
+        padding: 13,
+        borderRadius: 20,
+        marginBottom: 15
+    },
+    signInText: {
+        color: '#ffffff'
     }
 
 });

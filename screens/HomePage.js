@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity ,View, FlatList} from 'react-native';
 
@@ -12,21 +11,12 @@ const HomePage = () => {
           Heh!
         </Text>
   
-        <Text style={styles.instructions}> 
-          Feel free to check it out and leave your comments
-        </Text>
-  
-        <Text style={styles.instructions}>
-          On second thoughts... Don't give your feedback!
-        </Text>
-  
         <TouchableOpacity 
-          onPress={() => alert('The screen navigation option is not available yet!. Wait for it :)')}
+          onPress={() => alert('Next screen in progress. Wait for it :)')}
           style={styles.button}>
           <Text style={styles.buttonText}> Don't press if you dare! </Text>
         </TouchableOpacity>
   
-        <StatusBar style="auto" />
       </View>
     );
   }
@@ -41,20 +31,16 @@ const HomePage = () => {
       alignItems: 'center',
       justifyContent: 'center',
     },
-    logo: {
-      width: 100,
-      height: 150,
-      marginBottom: 10,
-    },
     instructions: {
       color: '#888',
-      fontSize: 18,
-      marginHorizontal:15,
+      marginLeft: 10,
+      marginBottom: 15,
+      textAlign: 'auto'
     },
     button: {
       backgroundColor: 'blue',
-      padding: 20,
-      borderRadius: 3,
+      padding: 15,
+      borderRadius: 15,
     },
     buttonText: {
       fontSize: 15,
