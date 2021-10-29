@@ -4,19 +4,24 @@ import { Image, StyleSheet, Text, TouchableOpacity ,View, FlatList} from 'react-
 const HomePage = () => {
     return(
         <View style={styles.container}>
-        <Image/>
-  
-        <Text style={styles.instructions}>
-          This is an e-commerce app! It is curently in progress...
-          Heh!
-        </Text>
-  
-        <TouchableOpacity 
-          onPress={() => alert('Next screen in progress. Wait for it :)')}
-          style={styles.button}>
-          <Text style={styles.buttonText}> Don't press if you dare! </Text>
-        </TouchableOpacity>
-  
+          <View> 
+            <Image/>
+
+            <Text style={styles.instructions}>
+              This is an e-commerce app! It is curently in progress...
+              Heh!
+            </Text>
+
+            <TouchableOpacity 
+              onPress={() => alert('Next screen in progress. Wait for it :)')}
+              style={styles.button}>
+              <Text style={styles.buttonText}> Don't press this button </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={{marginTop: 30}}>
+            <Text> The second view </Text>
+          </View>
       </View>
     );
   }
@@ -41,6 +46,7 @@ const HomePage = () => {
       backgroundColor: 'blue',
       padding: 15,
       borderRadius: 15,
+      justifyContent: 'center'
     },
     buttonText: {
       fontSize: 15,

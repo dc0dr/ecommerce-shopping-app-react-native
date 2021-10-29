@@ -10,7 +10,7 @@ const Login = ({navigation}) => {
 
             <TextInput
                 style = {loginStyles.textInput}
-                placeholder="Enter Email"
+                placeholder="Enter Email here"
             />
             <TextInput 
                 style = {loginStyles.textInput}
