@@ -14,7 +14,7 @@ const Login = ({navigation}) => {
             />
             <TextInput 
                 style = {loginStyles.textInput}
-                placeholder="Enter password"
+                placeholder="Enter password here"
                 />
 
             <TouchableOpacity 
