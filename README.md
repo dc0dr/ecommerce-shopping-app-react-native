@@ -1,8 +1,8 @@
 # Yorozuya's Hub
 
-This is an e-commerce app for Yorozuya in development..
+This is an e-commerce app for Yorozuya in development..<br />
 Look forward to it....
 
 # Expected Deadline
-* 5th November 2021 
+* 5th November 2021 <br />
 Might change if our TA is in a good mood (I hope he enters a good mood)
