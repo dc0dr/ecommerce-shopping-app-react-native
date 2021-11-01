@@ -1,16 +1,17 @@
 import * as React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity ,View, TextInput} from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity ,View, TextInput, TouchableHighlight} from 'react-native';
 
 const Login = ({navigation}) => {
     return(
         <View style = {loginStyles.containerView}>
-            <Text> Yorozuya </Text>
+            <Text style = {{marginBottom: 45, fontSize: 40}}> 
+            Yorozuya's Hub </Text>
 
-            <Text> Sign-in </Text>
+            <Text style = {{fontWeight: 'bold'}}> Sign-in </Text>
 
             <TextInput
                 style = {loginStyles.textInput}
-                placeholder="Enter Email here"
+                placeholder="Enter Email/Username here"
             />
             <TextInput 
                 style = {loginStyles.textInput}
@@ -23,7 +24,17 @@ const Login = ({navigation}) => {
                     <Text style={loginStyles.signInText}> Sign-in </Text>
             </TouchableOpacity>
 
-            <Text> Don't have an account? </Text>
+            <View>
+                <Text style = {{marginTop: 30, fontWeight: 'bold'}}> 
+                Don't have an account? </Text>
+
+                <TouchableHighlight 
+                    onPress={() => alert('We will create a signup page soon')}>
+                    <Text style = {{marginTop: 15, textAlign: 'center', color: '#ff5b45'}}> 
+                    Register</Text>
+                </TouchableHighlight>
+            </View>
+            
 
         </View>
     );
@@ -47,7 +58,7 @@ const loginStyles = StyleSheet.create({
         borderRadius: 5,
     },
     signInButton: {
-        backgroundColor: 'blue',
+        backgroundColor: '#ff5b45', //#ff5b45
         padding: 13,
         borderRadius: 20,
         marginBottom: 15
