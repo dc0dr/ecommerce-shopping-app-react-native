@@ -1,27 +1,42 @@
 import * as React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity ,View, FlatList} from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity ,View, FlatList, TextInput} from 'react-native';
+import { FontAwesome, Ionicons } from '@expo/vector-icons';
+
+
 
 const HomePage = () => {
     return(
-        <View style={styles.container}>
-          <View> 
-            <Image/>
+      <View style={styles.container}>
+        <View style={{
+          flexDirection: 'row',
+          backgroundColor: '#fff',
+          justifyContent: 'space-between'
+        }}>
 
-            <Text style={styles.instructions}>
-              This is an e-commerce app! It is curently in progress...
-              Heh!
-            </Text>
+          <TextInput 
+            style = {{
+              borderRadius: 8, fontSize: 15, marginBottom: 20, 
+              width: 200, textAlign: 'justify', backgroundColor: '#e6e4e1',
+              padding: 5}}
+            placeholder = "Enter search here "
+          />
 
-            <TouchableOpacity 
-              onPress={() => alert('Next screen in progress. Wait for it :)')}
-              style={styles.button}>
-              <Text style={styles.buttonText}> Don't press this button </Text>
-            </TouchableOpacity>
+          <View style={{
+            backgroundColor: '#e6e4e1', marginBottom: 20, borderRadius: 8, justifyContent: 'center',
+            paddingHorizontal: 6, paddingVertical: 6 }}>
+            <FontAwesome name='bell' size={24} color='black'/>
           </View>
+        </View>
+            
+        <View style={{
+          flex: 0.19, backgroundColor: '#888', borderRadius: 10, alignItems: 'center', justifyContent: 'center'}}>
+          <Text> Second view </Text>
+        </View>
 
-          <View style={{marginTop: 30}}>
-            <Text> The second view </Text>
-          </View>
+        <View style={{
+          flex: 0.68, marginTop: 30, backgroundColor: '#888', alignItems: 'center', justifyContent: 'center'}}>
+          <Text> Third view </Text>
+        </View>
       </View>
     );
   }
@@ -31,26 +46,8 @@ const HomePage = () => {
   
   const styles = StyleSheet.create({
     container: {
-      flex: 1, //The display type of every view 
+      flex: 1,
       backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    instructions: {
-      color: '#888',
-      marginLeft: 10,
-      marginBottom: 15,
-      textAlign: 'auto'
-    },
-    button: {
-      backgroundColor: 'blue',
-      padding: 15,
-      borderRadius: 15,
-      justifyContent: 'center'
-    },
-    buttonText: {
-      fontSize: 15,
-      color: '#fff'
     }
   });
   

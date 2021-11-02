@@ -4,6 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from  '@react-navigation/native-stack';
 import Login from './screens/Login';
 import HomePage from './screens/HomePage';
+import ProductDetails from './screens/ProductDetails';
+import Cart from './screens/Cart';
+import Checkout from './screens/Checkout';
 
 const Stack = createNativeStackNavigator();
 
