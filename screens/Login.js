@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity ,View, TextInput, TouchableHighlight} from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity ,View, TextInput, TouchableHighlight, Button, TouchableWithoutFeedback} from 'react-native';
+
 
 const Login = ({navigation}) => {
     return(
@@ -16,6 +17,7 @@ const Login = ({navigation}) => {
             <TextInput 
                 style = {loginStyles.textInput}
                 placeholder="Enter password here"
+                secureTextEntry={true}
                 />
 
             <TouchableOpacity 
@@ -27,12 +29,13 @@ const Login = ({navigation}) => {
             <View>
                 <Text style = {{marginTop: 30, fontWeight: 'bold'}}> 
                 Don't have an account? </Text>
-
-                <TouchableHighlight 
-                    onPress={() => alert('We will create a signup page soon')}>
-                    <Text style = {{marginTop: 15, textAlign: 'center', color: '#ff5b45'}}> 
-                    Register</Text>
-                </TouchableHighlight>
+                <TouchableWithoutFeedback
+                onPress={() => alert('The sign-up page will be created soon!')}
+                > 
+                   <Text 
+                   style = {{marginTop: 15, textAlign: 'center', color: '#ff5b45'}}> 
+                   Register </Text>
+                </TouchableWithoutFeedback>
             </View>
             
 
