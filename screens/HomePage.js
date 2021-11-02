@@ -35,7 +35,7 @@ const HomePage = () => {
 
         <View style={{
           flex: 0.68, marginTop: 30, backgroundColor: '#888', alignItems: 'center', justifyContent: 'center'}}>
-          <Text> Third view </Text>
+          <Text> Third view.. </Text>
         </View>
       </View>
     );
