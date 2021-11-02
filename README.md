@@ -5,4 +5,4 @@ Look forward to it....
 
 # Expected Deadline
 * 5th November 2021 <br />
-Might change if our TA is in a good mood (I hope he enters a good mood)
+The date might change if our TA is in a good mood (I hope he enters a good mood)
