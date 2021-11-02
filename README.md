@@ -25,5 +25,11 @@ Oh, also for anyone curious about the name I used for my store (*__Yorozuya__*),
 It's called *__Gintama__*. You should check it out if you watch anime like I do. It's really good <br/><br/>
 
 Here is the IMDB link, just to give you a small description about it:<br/>
-https://www.imdb.com/title/tt0988818/
+https://www.imdb.com/title/tt0988818/ <br/>
+
+Also the Wikipedia and Fandom Wiki links, in case you don't wanna go to IMDB for some weird reason:<br/>
+* Wikipidia: https://en.wikipedia.org/wiki/Gin_Tama <br/>
+* The Fandom Wiki: https://gintama.fandom.com/wiki/Main_Page <br /> 
+(I'd recommend reading the Fandom Wiki for in-depth topics and more explanation)
+
 
