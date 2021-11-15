@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity ,View, TextInput, TouchableHighlight, Button, TouchableWithoutFeedback} from 'react-native';
+import { 
+    Image, StyleSheet, Text, TouchableOpacity ,View, TextInput, TouchableHighlight, Button, TouchableWithoutFeedback
+    } from 'react-native';
 
 
 const Login = ({navigation}) => {
