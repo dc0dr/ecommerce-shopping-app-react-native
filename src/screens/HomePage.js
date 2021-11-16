@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity ,View, FlatList, TextInput, TouchableWithoutFeedback} from 'react-native';
-import { AntDesign, Ionicons, Feather } from '@expo/vector-icons';
+import { AntDesign, Ionicons, Feather, FontAwesome } from '@expo/vector-icons';
 import merch from '../merch/merch';
 
 
@@ -14,13 +14,13 @@ const HomePage = ({navigation}) => {
         
         <TouchableWithoutFeedback onPress= {() => navigation.navigate('Product', merch)}>
         <View style={{
-          padding: 15, height: 220, width: 150,
+          padding: 15, height: 250, width: 150,
           backgroundColor: '#ffffff', marginBottom: 10, marginTop: 5, 
-          borderRadius: 8, marginLeft: 13, marginRight: 10
+          borderRadius: 8, marginLeft: 15, marginRight: 15
           }}>
           <View style={{alignItems: 'center', padding: 5}}> 
             <Image source= {merch.image} 
-            style={{width: 100, height: 110, borderRadius: 15, flex: 1}}/>
+            style={{width: 100, height: 120, borderRadius: 15, flex: 1}}/>
           </View>
                 
           <View style={{marginTop: 10}}>
@@ -54,14 +54,20 @@ const HomePage = ({navigation}) => {
             </TouchableWithoutFeedback>
           </View>
 
-          <TextInput 
-            style = {{
-              borderRadius: 8, fontSize: 15, marginBottom: 20, 
-              width: 200, textAlign: 'center', backgroundColor: '#e6e4e1',
-              padding: 6, marginTop: 7}}
-            placeholder = "Enter search here "
-          />
-
+          <View style={{flexDirection: 'row', marginTop: 7}}>
+            <View style = {{
+                  borderRadius: 8, flexDirection: 'row', marginBottom: 20, 
+                  width: 200, textAlign: 'center', backgroundColor: '#e6e4e1',
+                  padding: 8}}>
+               <FontAwesome name="search" size={20} color='grey' style={{marginRight: 15, alignSelf: 'center'}}/>
+              <TextInput style={{
+                fontSize: 15
+              }}
+                placeholder = "Enter search here "
+              />
+            </View>
+          </View>
+          
           <View style={{
               marginBottom: 20, borderRadius: 8, alignSelf: 'center',
               padding: 6, marginTop: 7, marginRight: 5, backgroundColor: '#e6e4e1'}}>
@@ -75,7 +81,7 @@ const HomePage = ({navigation}) => {
         <View style={{
           flex: 0.19, backgroundColor: '#ffa18a', borderRadius: 10, alignItems: 'center', 
           justifyContent: 'center', marginLeft: 6, marginRight: 6}}>
-          <Text> Second view... </Text>
+          <Image source={require('../merchImages/store-logo-3.png')} style={{flex: 1, resizeMode: 'cover', height: 150, width: 150}}/>
         </View>
 
         <View style={{
