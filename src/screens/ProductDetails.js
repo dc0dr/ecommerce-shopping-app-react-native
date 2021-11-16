@@ -12,7 +12,6 @@ const ProductDetails = ({navigation, route}) => {
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <View style={{
                 paddingHorizontal: 20,
-                marginBottom: 20,
                 flexDirection: 'row',
                 justifyContent: 'space-between'
             }}> 
@@ -20,28 +19,34 @@ const ProductDetails = ({navigation, route}) => {
             </View>
         <View style={{
                 marginTop: 10,
-                flex: 0.45,
+                flex: 0.55,
                 justifyContent: 'center',
                 alignItems: 'center'
             }}>
                 <Image source={merch.image} style={{
-                    height: 230,
-                    width: 220,
-                    resizeMode: 'contain',
-                    borderRadius: 15
+                    height: 300,
+                    width: 300,
+                    resizeMode: 'cover',
+                    flex: 1,
+                    borderRadius: 10
                 }} />
             </View>
 
             <View style={{
-                flex: 0.55,
+                flex: 0.45,
+                width: 'auto',
                 marginTop: 20,
                 backgroundColor: '#d4d4d4',
                 marginHorizontal: 7,
                 marginBottom: 7,
                 borderRadius: 20,
             }}> 
-                <Text style={{marginTop: 10, textAlign: 'center', fontSize: 19, fontWeight: 'bold'}}>
+                <Text style={{marginTop: 10, textAlign: 'center', fontSize: 20, fontWeight: 'bold'}}>
                     <Text> {merch.name} </Text>
+                </Text>
+
+                <Text style={{marginTop: 10, textAlign: 'center', fontSize: 15}}>
+                    <Text> {merch.description} </Text>
                 </Text>
                
             </View>
