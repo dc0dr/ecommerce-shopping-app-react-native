@@ -1,17 +1,23 @@
-# Yorozuya's Hub
+# Yorozuya Stores
 
 This is an e-commerce app for Yorozuya in development..<br />
-Look forward to it....
+I'm basically selling anime merch...
 
 # Project Details (Miscellaneous things and stuffs)
 * 5th November 2021 <br />
 The date might change if our TA is in a good mood (I hope he enters a good mood) <br />
+__UPDATE__
+The date did change. The new deadline is 17th November 2021
 
 * Overall Progress : 20% complete... <br />
 (I'll never meet the deadline at this rate 🤦🏾‍♂️. Let's just hope for the best 🙂) </br>
 
 Sooo.. I'll be using an API called FakeStore API to generate my store data. Pretty basic stuff.<br />
 Gotta thank Mushud for that video on the Weather API thingy. Really helpful 👌🏾 <br />
+
+__UPDATE__
+Had issues with the API so I did things by hand </br>
+(Was....stressful, but luckily it wasn't a lot of items)
 
 # Project Dependencies
 * Here's the link to the API: <br />
