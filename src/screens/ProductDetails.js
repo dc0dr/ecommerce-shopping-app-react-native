@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text , FlatList, Image} from 'react-native';
+import { View, Text , FlatList, Image, ImageBackground, ScrollView} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 
@@ -9,22 +9,30 @@ const ProductDetails = ({navigation, route}) => {
 
     return(
 
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+    <ScrollView>
+
         <View style={{
                 paddingHorizontal: 20,
                 flexDirection: 'row',
-                justifyContent: 'space-between'
+                justifyContent: 'space-between',
+                marginTop: 15
             }}> 
                 <Ionicons name="md-arrow-back" size={28} onPress={() => navigation.goBack()}/>
-            </View>
-        <View style={{
+                <Image source={require('../merchImages/store-logo-3.png')} style={{flex: 1, resizeMode: 'contain', height: 50, width: 200, borderRadius: 20}}/>
+                <Ionicons name="cart" size={28} onPress={() => navigation.navigate('Cart')} />
+        </View>
+
+        <ScrollView 
+        nestedScrollEnabled={true} horizontal={true} pagingEnabled={true} showsHorizontalScrollIndicator={false}>
+            <View style={{
+                padding: 9,
                 marginTop: 10,
-                flex: 0.55,
+                flex: 1,
                 justifyContent: 'center',
                 alignItems: 'center'
             }}>
                 <Image source={merch.image} style={{
-                    height: 300,
+                    height: 500,
                     width: 300,
                     resizeMode: 'cover',
                     flex: 1,
@@ -33,24 +41,47 @@ const ProductDetails = ({navigation, route}) => {
             </View>
 
             <View style={{
-                flex: 0.45,
-                width: 'auto',
-                marginTop: 20,
-                backgroundColor: '#d4d4d4',
-                marginHorizontal: 7,
-                marginBottom: 7,
-                borderRadius: 20,
-            }}> 
-                <Text style={{marginTop: 10, textAlign: 'center', fontSize: 20, fontWeight: 'bold'}}>
-                    <Text> {merch.name} </Text>
-                </Text>
-
-                <Text style={{marginTop: 10, textAlign: 'center', fontSize: 15}}>
-                    <Text> {merch.description} </Text>
-                </Text>
-               
+                padding: 9,
+                marginTop: 10,
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center'
+            }}>
+                <Image source={merch.image} style={{
+                    height: 500,
+                    width: 300,
+                    resizeMode: 'cover',
+                    flex: 1,
+                    borderRadius: 10
+                }} />
             </View>
-     </View>
+            
+        </ScrollView>
+        
+       
+        <View style={{
+            width: 'auto',
+            marginTop: 10,
+            backgroundColor: '#d4d4d4',
+            marginHorizontal: 7,
+            marginBottom: 7,
+            borderRadius: 20,
+        }}> 
+            <Text style={{
+                marginTop: 15, textAlign: 'center', fontSize: 20, fontWeight: 'bold',
+                padding: 6
+                }}>
+                <Text> {merch.name} </Text>
+            </Text>
+
+            <Text style={{marginTop: 10, fontSize: 12,
+            padding: 8, textAlign: 'center'}}>
+                <Text style={{fontWeight: 'bold'}}> Description {"\n"} </Text>
+                <Text>  {merch.description} </Text>
+            </Text>
+            
+        </View>
+     </ScrollView>
      
     );
 }

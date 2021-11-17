@@ -15,12 +15,12 @@ const HomePage = ({navigation}) => {
         <TouchableWithoutFeedback onPress= {() => navigation.navigate('Product', merch)}>
         <View style={{
           padding: 15, height: 250, width: 150,
-          backgroundColor: '#ffffff', marginBottom: 10, marginTop: 5, 
+          backgroundColor: '#ffffff', marginBottom: 10, marginTop: 15, 
           borderRadius: 8, marginLeft: 15, marginRight: 15
           }}>
           <View style={{alignItems: 'center', padding: 5}}> 
             <Image source= {merch.image} 
-            style={{width: 100, height: 120, borderRadius: 15, flex: 1}}/>
+            style={{width: 110, height: 130, borderRadius: 15, flex: 1}}/>
           </View>
                 
           <View style={{marginTop: 10}}>
@@ -49,19 +49,18 @@ const HomePage = ({navigation}) => {
           <View style={{
               marginBottom: 20, borderRadius: 8, alignSelf: 'center',
               padding: 6, marginTop: 7, marginLeft: 5, backgroundColor: '#e6e4e1'}}>
-            <TouchableWithoutFeedback onPress = {() => navigation.navigate('Cart')}>
-              <Feather name='shopping-cart' size={24} color='grey' />
-            </TouchableWithoutFeedback>
+              <Ionicons name='cart' size={24} color='grey'  onPress = {() => navigation.navigate('Cart')}/>
           </View>
 
           <View style={{flexDirection: 'row', marginTop: 7}}>
             <View style = {{
                   borderRadius: 8, flexDirection: 'row', marginBottom: 20, 
-                  width: 200, textAlign: 'center', backgroundColor: '#e6e4e1',
+                  width: 250, textAlign: 'center', backgroundColor: '#e6e4e1',
                   padding: 8}}>
                <FontAwesome name="search" size={20} color='grey' style={{marginRight: 15, alignSelf: 'center'}}/>
               <TextInput style={{
-                fontSize: 15
+                fontSize: 15,
+                width: 250
               }}
                 placeholder = "Enter search here "
               />
@@ -71,17 +70,14 @@ const HomePage = ({navigation}) => {
           <View style={{
               marginBottom: 20, borderRadius: 8, alignSelf: 'center',
               padding: 6, marginTop: 7, marginRight: 5, backgroundColor: '#e6e4e1'}}>
-            <TouchableWithoutFeedback
-              onPress = {() => navigation.navigate('Settings')}>
-              <Feather name='settings' size={24} color='grey' />
-            </TouchableWithoutFeedback>
+              <Ionicons name='md-settings-outline' size={24} color='grey' onPress={() => navigation.navigate('Settings')} />
           </View>
         </View>
             
         <View style={{
-          flex: 0.19, backgroundColor: '#ffa18a', borderRadius: 10, alignItems: 'center', 
+          flex: 0.19, backgroundColor: '', borderRadius: 10, alignItems: 'center', 
           justifyContent: 'center', marginLeft: 6, marginRight: 6}}>
-          <Image source={require('../merchImages/store-logo-3.png')} style={{flex: 1, resizeMode: 'cover', height: 150, width: 150}}/>
+          <Image source={require('../merchImages/store-logo-3.png')} style={{flex: 1, resizeMode: 'cover', height: 150, width: 270, borderRadius: 20}}/>
         </View>
 
         <View style={{

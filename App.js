@@ -8,6 +8,7 @@ import ProductDetails from './src/screens/ProductDetails.js';
 import Cart from './src/screens/Cart.js';
 import Checkout from './src/screens/Checkout';
 import Settings from './src/screens/Settings.js';
+import Tab from './navigation/Tab.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,19 +17,18 @@ const App = () => {
 
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen 
-        // name = 'Login'
-        // component = {Login}/>
-        // <Stack.Screen
+        {/* <Stack.Screen 
+        options={{headerShown: false}}
+        name = 'Login'
+        component = {Login}/> */}
+        <Stack.Screen
         name = 'Home'
         component = {HomePage}/>
         <Stack.Screen
         name = 'Settings'
         component = {Settings}/>
         <Stack.Screen
-        options={{
-          headerShown: false,
-        }}
+        options={{headerShown: false,}}
         name = 'Product'
         component = {ProductDetails}/>
         <Stack.Screen
@@ -36,6 +36,12 @@ const App = () => {
         component = {Cart}/>
       </Stack.Navigator>
     </NavigationContainer>
+
+
+    // <NavigationContainer>
+        
+    //     <Tab />
+    // </NavigationContainer>
 
   );
 }
