@@ -9,8 +9,7 @@ The date might change if our TA is in a good mood (I hope he enters a good mood)
 * __UPDATE__<br />
 The date did change. The new deadline is 17th November 2021
 
-* Overall Progress : 30% complete... <br />
-(I'll never meet the deadline at this rate 🤦🏾‍♂️. Let's just hope for the best 🙂) </br>
+* Overall Progress : 60% complete... <br />
 
 * __UPDATE__<br />
 Had issues with the API so I did things by hand </br>
@@ -22,6 +21,8 @@ http://fakestoreapi.com/
 * Links to the Expo and React Native Docs:<br />
 https://reactnative.dev/docs/ <br />
 https://docs.expo.dev/guides/ <br />
+* Also links to the React Naviagtion docs: <br />
+https://reactnavigation.org/docs/
 
 # P.S.
 Oh, also for anyone curious about the name I used for my store (*__Yorozuya__*), I got it from an anime I really enjoy <br />
